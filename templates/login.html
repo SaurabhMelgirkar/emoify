@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Emoify - Login</title>
+  <link rel="stylesheet" href="/static/style3.css">
+</head>
+<body class="login-body">
+  <div class="login-container">
+    <img src="/static/logo.png" alt="Emoify Logo" class="logo" />
+
+    <form method="POST" action="/login">
+      <h2>User Sign In</h2>
+      <input type="email" name="email" placeholder="Email" required />
+      <input type="password" name="password" placeholder="Password" required />
+      <a href="/forgot" class="link">Forgot password?</a>
+      <button type="submit">Sign In</button>
+    </form>
+
+    <p class="small-text">Don't have an account? <a href="/signup" class="link">Register</a></p>
+    
+    <hr class="divider">
+
+    <form method="POST" action="/trainer-login">
+      <h2>Trainer Login</h2>
+      <input type="text" name="username" placeholder="Trainer Username" required />
+      <input type="password" name="password" placeholder="Trainer Password" required />
+      <button type="submit">Login as Trainer</button>
+    </form>
+  </div>
+</body>
+</html>

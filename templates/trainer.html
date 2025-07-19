@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Trainer Page - Emotion Pose Collector</title>
+    <!-- Optional: Bootstrap CSS CDN for styling -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body class="container my-4">
+
+    <h1 class="mb-4">Emotion Trainer Page</h1>
+
+    <!-- Collect Data Form -->
+    <form method="POST" action="{{ url_for('collect_data') }}" class="mb-3">
+        <div class="mb-3">
+            <label for="emotion" class="form-label">Emotion:</label>
+            <input type="text" id="emotion" name="emotion" class="form-control" placeholder="Enter emotion" required />
+        </div>
+        <button type="submit" class="btn btn-primary">Collect Data</button>
+    </form>
+
+    <!-- Train Model Form -->
+    <form method="POST" action="{{ url_for('train_model') }}" class="mb-3">
+        <button type="submit" class="btn btn-success">Train Data</button>
+    </form>
+
+    <!-- Message display -->
+    {% if message %}
+    <div class="alert alert-info" role="alert">
+        <pre>{{ message }}</pre>
+    </div>
+    {% endif %}
+
+</body>
+</html>

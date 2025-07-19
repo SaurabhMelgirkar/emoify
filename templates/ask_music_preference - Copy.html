@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Choose Your Music</title>
+</head>
+<body>
+    <h1>Your detected emotion is: {{ data }}</h1>
+    <p>Would you like to listen to Sad or Happy music?</p>
+    <form action="/recommend_music" method="POST">
+        <button type="submit" name="preference" value="Sad">Sad Music</button>
+        <button type="submit" name="preference" value="Happy">Happy Music</button> </br>
+        <button type="submit" name="preference" value="Angry">Angry Music</button>
+        <button type="submit" name="preference" value="Neutral">Neutral Music</button>
+
+
+    </form>
+</body>
+</html>
